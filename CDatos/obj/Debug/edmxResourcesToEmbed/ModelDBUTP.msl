@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_UTPModelStoreContainer" CdmEntityContainer="DB_UTPEntities">
+    <EntitySetMapping Name="TBL_ALUMNO">
+      <EntityTypeMapping TypeName="DB_UTPModel.TBL_ALUMNO">
+        <MappingFragment StoreEntitySet="TBL_ALUMNO">
+          <ScalarProperty Name="INT_ALUMNOID" ColumnName="INT_ALUMNOID" />
+          <ScalarProperty Name="VCH_NOMBRE" ColumnName="VCH_NOMBRE" />
+          <ScalarProperty Name="VCH_APELLIDO_PAT" ColumnName="VCH_APELLIDO_PAT" />
+          <ScalarProperty Name="VCH_APELLIDO_MAT" ColumnName="VCH_APELLIDO_MAT" />
+          <ScalarProperty Name="VCH_EMAIL" ColumnName="VCH_EMAIL" />
+          <ScalarProperty Name="BIT_ESTADO" ColumnName="BIT_ESTADO" />
+          <ScalarProperty Name="DAT_FECHA_CREA" ColumnName="DAT_FECHA_CREA" />
+          <ScalarProperty Name="DAT_FECA_ACT" ColumnName="DAT_FECA_ACT" />
+          <ScalarProperty Name="INT_USU_CREA" ColumnName="INT_USU_CREA" />
+          <ScalarProperty Name="INT_USU_ACT" ColumnName="INT_USU_ACT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_CURSO">
+      <EntityTypeMapping TypeName="DB_UTPModel.TBL_CURSO">
+        <MappingFragment StoreEntitySet="TBL_CURSO">
+          <ScalarProperty Name="INT_CURSOID" ColumnName="INT_CURSOID" />
+          <ScalarProperty Name="VCH_NOMBRE" ColumnName="VCH_NOMBRE" />
+          <ScalarProperty Name="BIT_ESTADO" ColumnName="BIT_ESTADO" />
+          <ScalarProperty Name="DAT_FECHA_CREA" ColumnName="DAT_FECHA_CREA" />
+          <ScalarProperty Name="DAT_FECA_ACT" ColumnName="DAT_FECA_ACT" />
+          <ScalarProperty Name="INT_USU_CREA" ColumnName="INT_USU_CREA" />
+          <ScalarProperty Name="INT_USU_ACT" ColumnName="INT_USU_ACT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_NOTA">
+      <EntityTypeMapping TypeName="DB_UTPModel.TBL_NOTA">
+        <MappingFragment StoreEntitySet="TBL_NOTA">
+          <ScalarProperty Name="INT_NOTAID" ColumnName="INT_NOTAID" />
+          <ScalarProperty Name="INT_ALUMNOID" ColumnName="INT_ALUMNOID" />
+          <ScalarProperty Name="INT_CURSO_ID" ColumnName="INT_CURSO_ID" />
+          <ScalarProperty Name="DEC_NOTA" ColumnName="DEC_NOTA" />
+          <ScalarProperty Name="BIT_ESTADO" ColumnName="BIT_ESTADO" />
+          <ScalarProperty Name="DAT_FECHA_CREA" ColumnName="DAT_FECHA_CREA" />
+          <ScalarProperty Name="DAT_FECA_ACT" ColumnName="DAT_FECA_ACT" />
+          <ScalarProperty Name="INT_USU_CREA" ColumnName="INT_USU_CREA" />
+          <ScalarProperty Name="INT_USU_ACT" ColumnName="INT_USU_ACT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

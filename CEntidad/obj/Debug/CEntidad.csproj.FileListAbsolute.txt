@@ -1,0 +1,5 @@
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CEntidad\bin\Debug\CEntidad.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CEntidad\bin\Debug\CEntidad.pdb
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CEntidad\obj\Debug\CEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CEntidad\obj\Debug\CEntidad.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CEntidad\obj\Debug\CEntidad.pdb

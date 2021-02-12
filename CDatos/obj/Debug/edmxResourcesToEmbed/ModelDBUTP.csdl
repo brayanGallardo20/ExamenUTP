@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_UTPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBL_ALUMNO">
+    <Key>
+      <PropertyRef Name="INT_ALUMNOID" />
+    </Key>
+    <Property Name="INT_ALUMNOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VCH_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VCH_APELLIDO_PAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VCH_APELLIDO_MAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VCH_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BIT_ESTADO" Type="Boolean" />
+    <Property Name="DAT_FECHA_CREA" Type="DateTime" Precision="0" />
+    <Property Name="DAT_FECA_ACT" Type="DateTime" Precision="0" />
+    <Property Name="INT_USU_CREA" Type="Int32" />
+    <Property Name="INT_USU_ACT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TBL_CURSO">
+    <Key>
+      <PropertyRef Name="INT_CURSOID" />
+    </Key>
+    <Property Name="INT_CURSOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VCH_NOMBRE" Type="String" />
+    <Property Name="BIT_ESTADO" Type="Boolean" />
+    <Property Name="DAT_FECHA_CREA" Type="DateTime" Precision="0" />
+    <Property Name="DAT_FECA_ACT" Type="DateTime" Precision="0" />
+    <Property Name="INT_USU_CREA" Type="Int32" />
+    <Property Name="INT_USU_ACT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TBL_NOTA">
+    <Key>
+      <PropertyRef Name="INT_NOTAID" />
+    </Key>
+    <Property Name="INT_NOTAID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INT_ALUMNOID" Type="Int32" />
+    <Property Name="INT_CURSO_ID" Type="Int32" />
+    <Property Name="DEC_NOTA" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="BIT_ESTADO" Type="Boolean" />
+    <Property Name="DAT_FECHA_CREA" Type="DateTime" Precision="0" />
+    <Property Name="DAT_FECA_ACT" Type="DateTime" Precision="0" />
+    <Property Name="INT_USU_CREA" Type="Int32" />
+    <Property Name="INT_USU_ACT" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="DB_UTPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_ALUMNO" EntityType="Self.TBL_ALUMNO" />
+    <EntitySet Name="TBL_CURSO" EntityType="Self.TBL_CURSO" />
+    <EntitySet Name="TBL_NOTA" EntityType="Self.TBL_NOTA" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\bin\Debug\CDatos.dll.config
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\bin\Debug\CDatos.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\bin\Debug\CDatos.pdb
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\obj\Debug\CDatos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\obj\Debug\CDatos.csproj.CopyComplete
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\obj\Debug\CDatos.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\obj\Debug\CDatos.pdb
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CDatos\obj\Debug\CDatos.csprojAssemblyReference.cache

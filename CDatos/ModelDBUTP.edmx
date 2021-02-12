@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_UTPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_ALUMNO">
+          <Key>
+            <PropertyRef Name="INT_ALUMNOID" />
+          </Key>
+          <Property Name="INT_ALUMNOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VCH_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="VCH_APELLIDO_PAT" Type="varchar" MaxLength="50" />
+          <Property Name="VCH_APELLIDO_MAT" Type="varchar" MaxLength="50" />
+          <Property Name="VCH_EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="BIT_ESTADO" Type="bit" />
+          <Property Name="DAT_FECHA_CREA" Type="date" />
+          <Property Name="DAT_FECA_ACT" Type="date" />
+          <Property Name="INT_USU_CREA" Type="int" />
+          <Property Name="INT_USU_ACT" Type="int" />
+        </EntityType>
+        <EntityType Name="TBL_CURSO">
+          <Key>
+            <PropertyRef Name="INT_CURSOID" />
+          </Key>
+          <Property Name="INT_CURSOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VCH_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="BIT_ESTADO" Type="bit" />
+          <Property Name="DAT_FECHA_CREA" Type="date" />
+          <Property Name="DAT_FECA_ACT" Type="date" />
+          <Property Name="INT_USU_CREA" Type="int" />
+          <Property Name="INT_USU_ACT" Type="int" />
+        </EntityType>
+        <EntityType Name="TBL_NOTA">
+          <Key>
+            <PropertyRef Name="INT_NOTAID" />
+          </Key>
+          <Property Name="INT_NOTAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="INT_ALUMNOID" Type="int" />
+          <Property Name="INT_CURSO_ID" Type="int" />
+          <Property Name="DEC_NOTA" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="BIT_ESTADO" Type="bit" />
+          <Property Name="DAT_FECHA_CREA" Type="date" />
+          <Property Name="DAT_FECA_ACT" Type="date" />
+          <Property Name="INT_USU_CREA" Type="int" />
+          <Property Name="INT_USU_ACT" Type="int" />
+        </EntityType>
+        <EntityContainer Name="DB_UTPModelStoreContainer">
+          <EntitySet Name="TBL_ALUMNO" EntityType="Self.TBL_ALUMNO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_CURSO" EntityType="Self.TBL_CURSO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_NOTA" EntityType="Self.TBL_NOTA" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_UTPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBL_ALUMNO">
+          <Key>
+            <PropertyRef Name="INT_ALUMNOID" />
+          </Key>
+          <Property Name="INT_ALUMNOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VCH_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VCH_APELLIDO_PAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VCH_APELLIDO_MAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VCH_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BIT_ESTADO" Type="Boolean" />
+          <Property Name="DAT_FECHA_CREA" Type="DateTime" Precision="0" />
+          <Property Name="DAT_FECA_ACT" Type="DateTime" Precision="0" />
+          <Property Name="INT_USU_CREA" Type="Int32" />
+          <Property Name="INT_USU_ACT" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBL_CURSO">
+          <Key>
+            <PropertyRef Name="INT_CURSOID" />
+          </Key>
+          <Property Name="INT_CURSOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VCH_NOMBRE" Type="String" />
+          <Property Name="BIT_ESTADO" Type="Boolean" />
+          <Property Name="DAT_FECHA_CREA" Type="DateTime" Precision="0" />
+          <Property Name="DAT_FECA_ACT" Type="DateTime" Precision="0" />
+          <Property Name="INT_USU_CREA" Type="Int32" />
+          <Property Name="INT_USU_ACT" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBL_NOTA">
+          <Key>
+            <PropertyRef Name="INT_NOTAID" />
+          </Key>
+          <Property Name="INT_NOTAID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="INT_ALUMNOID" Type="Int32" />
+          <Property Name="INT_CURSO_ID" Type="Int32" />
+          <Property Name="DEC_NOTA" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="BIT_ESTADO" Type="Boolean" />
+          <Property Name="DAT_FECHA_CREA" Type="DateTime" Precision="0" />
+          <Property Name="DAT_FECA_ACT" Type="DateTime" Precision="0" />
+          <Property Name="INT_USU_CREA" Type="Int32" />
+          <Property Name="INT_USU_ACT" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="DB_UTPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBL_ALUMNO" EntityType="Self.TBL_ALUMNO" />
+          <EntitySet Name="TBL_CURSO" EntityType="Self.TBL_CURSO" />
+          <EntitySet Name="TBL_NOTA" EntityType="Self.TBL_NOTA" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_UTPModelStoreContainer" CdmEntityContainer="DB_UTPEntities">
+          <EntitySetMapping Name="TBL_ALUMNO">
+            <EntityTypeMapping TypeName="DB_UTPModel.TBL_ALUMNO">
+              <MappingFragment StoreEntitySet="TBL_ALUMNO">
+                <ScalarProperty Name="INT_ALUMNOID" ColumnName="INT_ALUMNOID" />
+                <ScalarProperty Name="VCH_NOMBRE" ColumnName="VCH_NOMBRE" />
+                <ScalarProperty Name="VCH_APELLIDO_PAT" ColumnName="VCH_APELLIDO_PAT" />
+                <ScalarProperty Name="VCH_APELLIDO_MAT" ColumnName="VCH_APELLIDO_MAT" />
+                <ScalarProperty Name="VCH_EMAIL" ColumnName="VCH_EMAIL" />
+                <ScalarProperty Name="BIT_ESTADO" ColumnName="BIT_ESTADO" />
+                <ScalarProperty Name="DAT_FECHA_CREA" ColumnName="DAT_FECHA_CREA" />
+                <ScalarProperty Name="DAT_FECA_ACT" ColumnName="DAT_FECA_ACT" />
+                <ScalarProperty Name="INT_USU_CREA" ColumnName="INT_USU_CREA" />
+                <ScalarProperty Name="INT_USU_ACT" ColumnName="INT_USU_ACT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_CURSO">
+            <EntityTypeMapping TypeName="DB_UTPModel.TBL_CURSO">
+              <MappingFragment StoreEntitySet="TBL_CURSO">
+                <ScalarProperty Name="INT_CURSOID" ColumnName="INT_CURSOID" />
+                <ScalarProperty Name="VCH_NOMBRE" ColumnName="VCH_NOMBRE" />
+                <ScalarProperty Name="BIT_ESTADO" ColumnName="BIT_ESTADO" />
+                <ScalarProperty Name="DAT_FECHA_CREA" ColumnName="DAT_FECHA_CREA" />
+                <ScalarProperty Name="DAT_FECA_ACT" ColumnName="DAT_FECA_ACT" />
+                <ScalarProperty Name="INT_USU_CREA" ColumnName="INT_USU_CREA" />
+                <ScalarProperty Name="INT_USU_ACT" ColumnName="INT_USU_ACT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_NOTA">
+            <EntityTypeMapping TypeName="DB_UTPModel.TBL_NOTA">
+              <MappingFragment StoreEntitySet="TBL_NOTA">
+                <ScalarProperty Name="INT_NOTAID" ColumnName="INT_NOTAID" />
+                <ScalarProperty Name="INT_ALUMNOID" ColumnName="INT_ALUMNOID" />
+                <ScalarProperty Name="INT_CURSO_ID" ColumnName="INT_CURSO_ID" />
+                <ScalarProperty Name="DEC_NOTA" ColumnName="DEC_NOTA" />
+                <ScalarProperty Name="BIT_ESTADO" ColumnName="BIT_ESTADO" />
+                <ScalarProperty Name="DAT_FECHA_CREA" ColumnName="DAT_FECHA_CREA" />
+                <ScalarProperty Name="DAT_FECA_ACT" ColumnName="DAT_FECA_ACT" />
+                <ScalarProperty Name="INT_USU_CREA" ColumnName="INT_USU_CREA" />
+                <ScalarProperty Name="INT_USU_ACT" ColumnName="INT_USU_ACT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

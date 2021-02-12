@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_UTPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_ALUMNO">
+    <Key>
+      <PropertyRef Name="INT_ALUMNOID" />
+    </Key>
+    <Property Name="INT_ALUMNOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VCH_NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="VCH_APELLIDO_PAT" Type="varchar" MaxLength="50" />
+    <Property Name="VCH_APELLIDO_MAT" Type="varchar" MaxLength="50" />
+    <Property Name="VCH_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="BIT_ESTADO" Type="bit" />
+    <Property Name="DAT_FECHA_CREA" Type="date" />
+    <Property Name="DAT_FECA_ACT" Type="date" />
+    <Property Name="INT_USU_CREA" Type="int" />
+    <Property Name="INT_USU_ACT" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_CURSO">
+    <Key>
+      <PropertyRef Name="INT_CURSOID" />
+    </Key>
+    <Property Name="INT_CURSOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VCH_NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="BIT_ESTADO" Type="bit" />
+    <Property Name="DAT_FECHA_CREA" Type="date" />
+    <Property Name="DAT_FECA_ACT" Type="date" />
+    <Property Name="INT_USU_CREA" Type="int" />
+    <Property Name="INT_USU_ACT" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_NOTA">
+    <Key>
+      <PropertyRef Name="INT_NOTAID" />
+    </Key>
+    <Property Name="INT_NOTAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INT_ALUMNOID" Type="int" />
+    <Property Name="INT_CURSO_ID" Type="int" />
+    <Property Name="DEC_NOTA" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="BIT_ESTADO" Type="bit" />
+    <Property Name="DAT_FECHA_CREA" Type="date" />
+    <Property Name="DAT_FECA_ACT" Type="date" />
+    <Property Name="INT_USU_CREA" Type="int" />
+    <Property Name="INT_USU_ACT" Type="int" />
+  </EntityType>
+  <EntityContainer Name="DB_UTPModelStoreContainer">
+    <EntitySet Name="TBL_ALUMNO" EntityType="Self.TBL_ALUMNO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CURSO" EntityType="Self.TBL_CURSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_NOTA" EntityType="Self.TBL_NOTA" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

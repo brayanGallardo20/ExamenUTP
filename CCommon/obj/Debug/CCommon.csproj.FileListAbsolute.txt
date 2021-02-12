@@ -1,0 +1,10 @@
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\bin\Debug\CCommon.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\bin\Debug\CCommon.pdb
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\obj\Debug\CCommon.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\obj\Debug\CCommon.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\obj\Debug\CCommon.pdb
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Usuario\Desktop\UTP\ExamenUTP\CCommon\obj\Debug\CCommon.csproj.CopyComplete
